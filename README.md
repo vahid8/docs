@@ -4,7 +4,7 @@
 - [Gmail settings for app](#Gmail-app-setting)
 - [python virtual env setup](#Python-virtual-env)
 - [Kill process using port](#Kill-process-using-port)
-- [Supervisor setup](#Super-visor-setup)
+- [Supervisor setup](#Supervisor-setup)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -93,8 +93,13 @@ use the following procedure to setup a new virtual env
         $ sudo supervisorctl update
       ```
       Then it will automatically start your program. you can check logs in your log file.
-   ### supervisor ClI quick help
-    *
-
+   #### supervisor ClI quick help
+    * Enter shell : $ sudo supervisorctl  
+    * See available options: >>help
+    * see status: >>status
+    * stop a task: >>stop <task_name>
+    * start a stoped one: >>stop <task_name>
+    * restart a task: >>restart <task_name>
+    * quit shell: >>quit
 
     
