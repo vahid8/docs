@@ -3,6 +3,7 @@
 ## 📖 Contents
 - [Gmail settings for app](#Gmail-app-setting)
 - [python virtual env setup](#Python-virtual-env)
+- [Kill process using port](#Kill-process-using-port)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -47,4 +48,13 @@ use the following procedure to setup a new virtual env
   * To save them in a txt
       ```shell
         pip freeze > requirments.txt
+      ```
+## Kill Process using Port
+ 1. find process ID using a specifig port e.g 5000
+      ```shell
+        $ sudo ss -lptn 'sport = :5000'
+      ```
+  2. Kill the process
+      ```shell
+        $ sudo kill -9 <pid>
       ```
