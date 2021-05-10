@@ -5,6 +5,7 @@
 - [python virtual env setup](#Python-virtual-env)
 - [Kill process using port](#Kill-process-using-port)
 - [Supervisor setup](#Supervisor-setup)
+- [Server setup](#Server-setup)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -101,5 +102,31 @@ use the following procedure to setup a new virtual env
     * start a stoped one: >>stop <task_name>
     * restart a task: >>restart <task_name>
     * quit shell: >>quit
+
+## Server Setup 
+### Add new user with Administrative Privileges
+partly reference in  [Digital Ocean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04)
+1. Logging in as root:
+```shell
+$ ssh root@your_server_ip
+```
+2.create a new user
+```shell
+  $ adduser my_new_user
+```
+3.Granting Administrative Privileges (adding to sudo list)
+```shell
+  $ usermod -aG sudo my_new_user
+```
+4.Enabling External Access using ssh
+  you need to add a copy of your local public key to the new users ~/.ssh/authorized_keys file
+  or simply use rysinc to copy it from root user ( you already have the key there) to the new user
+```shell
+  $ rsync --archive --chown=my_new_user:my_new_user ~/.ssh /home/my_new_user
+```
+5. you can login to server as non -rrot using :
+```ssh
+$ ssh my_new_user@your_server_ip
+```
 
     
