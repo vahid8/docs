@@ -5,6 +5,7 @@
 - [python virtual env setup](#Python-virtual-env)
 - [Supervisor setup](#Supervisor-setup)
 - [Server setup](#Server-setup)
+- [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
 
 ## Gmail App Setting
@@ -120,6 +121,49 @@ $ ssh root@your_server_ip
 ```ssh
 $ ssh my_new_user@your_server_ip
 ```
+
+## Secure Nginx Encrypt
+**Prerequisites**
+ 1- having a domain name
+ 2- add it to server
+ 3- having two DNS record like below on your domain settings in the server:
+ | Type | Hostname | Value | TTL |
+| --- | --- | --- | --- |
+| A | www.your_domain_name.com | server_ip_address | 3600 |
+| A | your_domain_name.com  | server_ip_address | 3600 |
+
+**Install certbot**
+```sh
+sudo apt install certbot python3-certbot-nginx
+```
+**check** to see your domain name in /etc/nginx/sites-available/your_domain_name
+or in etc/nginx/sites-enabled/your-servername
+you need to have serve_name your-servername.com www.your-servername.com;
+under the listen parameters in server configurations.
+*check for typos in server config by : 
+```sh
+$ sudo nginx -t
+```
+**reload nginx**
+```sh
+$ sudo systemctl reload nginx
+```
+** Allowing HTTPS throught the firewall **
+```
+sudo ufw allow 'Nginx Full'
+sudo ufw delete allow 'Nginx HTTP'
+```
+** finally obtain an SSL certificate using certbot
+```
+sudo certbot --nginx -d example.com -d www.example.com
+```
+**optional : activate auto-renewal (certificates are 90 days valid)
+```
+sudo systemctl status certbot.timer
+```
+
+
+
 
 ## Shortcuts
 here is the list of commands that will be needed in daily routines
