@@ -132,7 +132,7 @@ $ ssh my_new_user@your_server_ip
 | A | www.your_domain_name.com | server_ip_address | 3600 |
 | A | your_domain_name.com  | server_ip_address | 3600 |
 
-**Install certbot**
+**1.Install certbot**
 ```sh
 sudo apt install certbot python3-certbot-nginx
 ```
@@ -140,24 +140,24 @@ sudo apt install certbot python3-certbot-nginx
 or in etc/nginx/sites-enabled/your-servername
 you need to have serve_name your-servername.com www.your-servername.com;
 under the listen parameters in server configurations.
-*check for typos in server config by : 
+*check* for typos in server config by : 
 ```sh
 $ sudo nginx -t
 ```
-**reload nginx**
+**2.reload nginx**
 ```sh
 $ sudo systemctl reload nginx
 ```
-** Allowing HTTPS throught the firewall **
+**3.Allowing HTTPS throught the firewall**
 ```
 sudo ufw allow 'Nginx Full'
 sudo ufw delete allow 'Nginx HTTP'
 ```
-** finally obtain an SSL certificate using certbot
+**4.finally obtain an SSL certificate using certbot**
 ```
 sudo certbot --nginx -d example.com -d www.example.com
 ```
-**optional : activate auto-renewal (certificates are 90 days valid)
+**5.optional : activate auto-renewal (certificates are 90 days valid)**
 ```
 sudo systemctl status certbot.timer
 ```
