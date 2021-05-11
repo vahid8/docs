@@ -121,7 +121,7 @@ $ ssh root@your_server_ip
 $ ssh my_new_user@your_server_ip
 ```
 
-## Shurtcuts
+## Shortcuts
 here is the list of commands that will be needed in daily routines
 | Command | Description |
 | --- | --- |
