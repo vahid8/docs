@@ -132,7 +132,7 @@ here is the list of commands that will be needed in daily routines
 | `sudo rm -r folder_path` | delete a folder recursively |
 | `sudo ss -lptn 'sport = :5000'` | find pid of the process that use a specifig port e.g 5000|
 | `sudo kill -9 <pid>` | kill a process |
-| `wath -n 1 nvidia-smi` | check the status of GPU with 1 second update |
+| `watch -n 1 nvidia-smi` | check the status of GPU with 1 second update |
 
 
 
