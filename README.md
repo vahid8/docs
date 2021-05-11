@@ -3,9 +3,9 @@
 ## 📖 Contents
 - [Gmail settings for app](#Gmail-app-setting)
 - [python virtual env setup](#Python-virtual-env)
-- [Kill process using port](#Kill-process-using-port)
 - [Supervisor setup](#Supervisor-setup)
 - [Server setup](#Server-setup)
+- [Shortcuts](#Shortcuts)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -51,15 +51,7 @@ use the following procedure to setup a new virtual env
       ```shell
         pip freeze > requirments.txt
       ```
-## Kill Process using Port
- 1. find process ID using a specifig port e.g 5000
-      ```shell
-        $ sudo ss -lptn 'sport = :5000'
-      ```
-  2. Kill the process
-      ```shell
-        $ sudo kill -9 <pid>
-      ```
+
 
 ## Supervisor Setup 
   partly reference in  [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
@@ -128,5 +120,19 @@ $ ssh root@your_server_ip
 ```ssh
 $ ssh my_new_user@your_server_ip
 ```
+
+## Shurtcuts
+here is the list of commands that will be needed in daily routines
+| Command | Description |
+| --- | --- |
+| `ip r` | get the ip of current machine |
+| `curl -4 icanhazip.com` | get my public id  |
+| `Ctrl+f5` | remove cache |
+| `unzip file.zip -d destination_folder` | unzip a file |
+| `sudo rm -r folder_path` | delete a folder recursively |
+| `sudo ss -lptn 'sport = :5000'` | find pid of the process that use a specifig port e.g 5000|
+| `sudo kill -9 <pid>` | kill a process |
+
+
 
     
