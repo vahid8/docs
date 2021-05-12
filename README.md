@@ -7,6 +7,7 @@
 - [Server setup](#Server-setup)
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
+- [Git Shortcuts](#Git Shortcuts)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -177,6 +178,13 @@ here is the list of commands that will be needed in daily routines
 | `sudo ss -lptn 'sport = :5000'` | find pid of the process that use a specifig port e.g 5000|
 | `sudo kill -9 <pid>` | kill a process |
 | `watch -n 1 nvidia-smi` | check the status of GPU with 1 second update |
+
+## Git Shortcuts
+here is the list of commands that will be needed in daily routines
+| Command | Description |
+| --- | --- |
+| `git checkout -- <filename>` | discard local changes on a specific file |
+| `git reset --hard` | discard all local changes on a repo |
 
 
 
