@@ -7,7 +7,7 @@
 - [Server setup](#Server-setup)
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
-- [Git Shortcuts](#Git Shortcuts)
+- [Git Shortcuts](#Git-Shortcuts)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
