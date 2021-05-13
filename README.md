@@ -178,7 +178,7 @@ here is the list of commands that will be needed in daily routines
 | `sudo ss -lptn 'sport = :5000'` | find pid of the process that use a specifig port e.g 5000|
 | `sudo kill -9 <pid>` | kill a process |
 | `watch -n 1 nvidia-smi` | check the status of GPU with 1 second update |
-| `sudo du -cha --max-depth=1 /| grep -E "M|G"` | Check the memory consumpation of files
+| `sudo du -cha --max-depth=1 / \| grep -E "M|G"` | Check the memory consumpation of files
 | `sudo du -sh` | Check the memory consumtion of a directory
 
 
