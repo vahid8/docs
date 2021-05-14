@@ -185,6 +185,7 @@ here is the list of commands that will be needed in daily routines
 | `nproc --all` | Number of cpu cores
 | `cat /etc/os-release` | check the os spec
 | `df -h /` | check the os Harddisk free space
+| `scp -P 22884 /home/vahid/Downloads/libcudnn8_8.2.deb  ddevroot@192.20.100.158:/home/ddevroot/uploads/libcudnn8.deb` | copy file to server
  
 
 
