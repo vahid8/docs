@@ -180,7 +180,7 @@ here is the list of commands that will be needed in daily routines
 | `watch -n 1 nvidia-smi` | check the status of GPU with 1 second update |
 | `sudo du -cha --max-depth=1 / \| grep -E "M\|G"` | Check the memory consumpation of files
 | `sudo du -sh` | Check the memory consumtion of a directory
-| `lspci -v | less` | Check the Graphic card spec (use q for exit)
+| `lspci -v \| less` | Check the Graphic card spec (use q for exit)
 | `ubuntu-drivers devices` | Check the Graphic card spec (use q for exit)
 | `nproc --all` | Number of cpu cores
 | `cat /etc/os-release` | check the os spec
