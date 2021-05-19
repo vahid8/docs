@@ -55,7 +55,7 @@ use the following procedure to setup a new virtual env
       ```
 
 
-## Ubuntu Add User
+## Supervisor setup
   partly reference in  [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
  1. Install and restart it
       ```shell
@@ -97,7 +97,7 @@ use the following procedure to setup a new virtual env
     * restart a task: >>restart <task_name>
     * quit shell: >>quit
 
-## Server Setup 
+## Ubuntu Add User 
 ### Add new user with Administrative Privileges
 partly reference in  [Digital Ocean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04)
 1. Logging in as root:
