@@ -77,7 +77,7 @@ use the following procedure to setup a new virtual env
         [program:face_script]
         command=<path to your bash.sh file>
         autostart=true
-        autorestart=false # change it to true for production level
+        autorestart=false # change it to true for production level, in development I want to stop process manually and dont start it agin automatically
         stopasgroup=true # To stop all subprocess when it stop or restarts 
         stderr_logfile=/var/log/face_script.err.log
         stdout_logfile=/var/log/face_script.out.log
