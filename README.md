@@ -4,7 +4,7 @@
 - [Gmail settings for app](#Gmail-app-setting)
 - [python virtual env setup](#Python-virtual-env)
 - [Supervisor setup](#Supervisor-setup)
-- [Server setup](#Server-setup)
+- [Ubuntu Add User](#Ubuntu-Add-User)
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
 - [Git Shortcuts](#Git-Shortcuts)
@@ -55,7 +55,7 @@ use the following procedure to setup a new virtual env
       ```
 
 
-## Supervisor Setup 
+## Ubuntu Add User
   partly reference in  [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
  1. Install and restart it
       ```shell
