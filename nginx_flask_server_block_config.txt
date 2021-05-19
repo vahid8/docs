@@ -1,0 +1,17 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name 20.71.112.158;
+        client_max_body_size 10000M;
+
+        location /static {
+                alias /home/ddevroot/flask_blurring/project/static;
+        }
+
+        location / {
+                proxy_pass http://localhost:8000;
+                include /etc/nginx/proxy_params;
+                proxy_redirect off;
+        }
+}
