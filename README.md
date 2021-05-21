@@ -63,7 +63,14 @@ use the following procedure to setup a new virtual env
         $ sudo service supervisor restart
       ```
   2. Add a new program 
-      write a bash code (I will include it to my projects on Github just change the virutual env paths).     
+      write a bash code like below example.
+      ```shell
+        #!/bin/bash
+        cd /home/dev2/Vahid_codes/web_app/flask_blurring
+        source /home/dev2/Vahid_codes/env/bin/activate
+        export APP_SETTINGS="project.config.ProductionConfig"
+        python manage.py runserver --host=0.0.0.0
+      ```
       and make it executable using the nelow command.      
       ```shell
         $ chmod +x <path to your .sh file>
