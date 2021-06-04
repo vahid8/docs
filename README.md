@@ -96,6 +96,11 @@ use the following procedure to setup a new virtual env
         $ sudo supervisorctl update
       ```
       Then it will automatically start your program. you can check logs in your log file.
+      
+   6. in case of changing configs or bash files:
+      ```ssh
+        $ sudo supervisorctl restart
+      ```
    #### supervisor ClI quick help
     * Enter shell : $ sudo supervisorctl  
     * See available options: >>help
