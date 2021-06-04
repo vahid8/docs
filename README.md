@@ -64,6 +64,7 @@ use the following procedure to setup a new virtual env
       ```
   2. Add a new program 
       write a bash code like below example.
+      Addin shebang (#!/bin/bash) is very important also cd into your working dir
       ```shell
         #!/bin/bash
         cd /home/dev2/Vahid_codes/web_app/flask_blurring
