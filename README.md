@@ -7,7 +7,7 @@
 - [Ubuntu Add User](#Ubuntu-Add-User)
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
-- [Git Shortcuts](#Git-Shortcuts)
+- [Git](#Git)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -203,7 +203,15 @@ here is the list of commands that will be needed in daily routines
 
 
 
-## Git Shortcuts
+## Git
+How to add ssh key :
+```ssh
+1. Find your public ssh key (if exists) -> cd .ssh and ls
+if not exists -> ssh-keygen to create
+2. Cat <the-name>.pub
+3. copy that starting with ssh-rsa ...
+4. Go to github settings and add new ssh then paste it there.
+```
 here is the list of commands that will be needed in daily routines
 | Command | Description |
 | --- | --- |
