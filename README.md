@@ -200,6 +200,8 @@ here is the list of commands that will be needed in daily routines
 | `df -h /` | check the os Harddisk free space
 | `scp -P 22884 /home/vahid/Downloads/libcudnn8_8.2.deb  ddevroot@192.20.100.158:/home/ddevroot/uploads/libcudnn8.deb` | copy file to server
 | `sudo apt-get install python3-tk` | in case of no gui installed for plt.show()
+| `sudo fdisk -l` | To get list of all HDD (internal and external with their name
+| `sudo mount -o remount,uid=1000,gid=1000,rw /dev/sdd1`| To remount a spesific HDD with write privilege
 
  
 
