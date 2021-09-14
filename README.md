@@ -236,7 +236,7 @@ here is the list of commands that will be needed in daily routines
 | Command | Description |
 | --- | --- |
 | `git checkout -- <filename>` | discard local changes on a specific file |
-| `git reset --hard` | discard all local changes on a repo |
+| `git checkout -- . or git reset --hard` | discard all local changes on a repo |
 
 
 
