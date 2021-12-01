@@ -220,6 +220,7 @@ here is the list of commands that will be needed in daily routines
 | `sudo apt-get install python3-tk` | in case of no gui installed for plt.show()
 | `sudo fdisk -l` | To get list of all HDD (internal and external with their name
 | `sudo mount -o remount,uid=1000,gid=1000,rw /dev/sdd1`| To remount a spesific HDD with write privilege
+| `sudo apt-get install lxde` | To install lxde ( A lightweight desktop environment for ubuntu
 
  
 
