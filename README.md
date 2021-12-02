@@ -86,7 +86,8 @@ use the following procedure to setup a new virtual env
         cd /home/dev2/Vahid_codes/web_app/flask_blurring
         source /home/dev2/Vahid_codes/env/bin/activate
         export APP_SETTINGS="project.config.ProductionConfig"
-        python manage.py runserver --host=0.0.0.0
+        #python manage.py runserver --host=0.0.0.0
+        gunicorn -b 0.0.0.0:5000 -w 6 project:app --timeout 36000
       ```
       and make it executable using the nelow command.      
       ```shell
