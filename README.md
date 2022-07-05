@@ -189,6 +189,8 @@ here is the list of commands that will be needed in daily routines
 | `git dif <filename>` | see the changes to a file from previus commit till now |
 | `git checkout -- <filename>` | discard local changes on a specific file |
 | `git checkout -- . or git reset --hard` | discard all local changes on a repo |
+| `git checkout --track origin/master` | In case you get in to the detached head instead of the remote branch |
+| | It tells stricktly that you need to track the branch master from remote |  
 
 
 
