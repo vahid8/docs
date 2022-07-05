@@ -186,6 +186,7 @@ if not exists -> ssh-keygen to create
 here is the list of commands that will be needed in daily routines
 | Command | Description |
 | --- | --- |
+| `git dif <filename>` | see the changes to a file from previus commit till now |
 | `git checkout -- <filename>` | discard local changes on a specific file |
 | `git checkout -- . or git reset --hard` | discard all local changes on a repo |
 
