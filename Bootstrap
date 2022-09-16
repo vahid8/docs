@@ -1,0 +1,15 @@
+<div class="container"> -> always inside a container (use "container-fluid" for full screen)
+  </div class="row> -> always start with a row and then col
+    # define a center col that fills half of the screen (6/12) for all screens from larg to small
+    # fill the write and left equally with cols
+    </div class="col"></div>
+    </div class="col-sm-6"></div>
+    </div class="col"></div>
+  
+  </div>
+</div>
+
+#-------------------
+class="col-lg-4 col-md-6 col-sm-12" -> it means depend on the screen size use 4 or 6 or all cols
+#-------------------
+<img class="img-fluid">
