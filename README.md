@@ -7,6 +7,7 @@
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
 - [Git](#Git)
+- [Docker](#Docker)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -193,5 +194,9 @@ here is the list of commands that will be needed in daily routines
 | | It tells stricktly that you need to track the branch master from remote |  
 
 
+## Docker
+| Command | Description |
+| --- | --- |
+| `docker exec -t your-db-container pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql` | backup the database running on docker |
+| `cat your_dump.sql | docker exec -i your-db-container psql -U postgres` | Restore the database to the docker |
 
-    
