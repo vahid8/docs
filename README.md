@@ -199,4 +199,11 @@ here is the list of commands that will be needed in daily routines
 | --- | --- |
 | ```docker exec -t your-db-container pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql``` | backup the database running on docker |
 | ```cat your_dump.sql \| docker exec -i your-db-container psql -U postgres``` | Restore the database to the docker |
+| ```docker images``` | Available images on the system |
+| ```docker ps -a``` | Available containers on the system (running or stopped) |
+| ```docker ps``` | Available containers on the system (running) |
+| ```docker rm``` | remove one or more container |
+| ```docker rmi``` | remove one or more images |
+
+
 
