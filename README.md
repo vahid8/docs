@@ -205,6 +205,7 @@ here is the list of commands that will be needed in daily routines
 | ```docker rm``` | remove one or more container |
 | ```docker rmi``` | remove one or more images |
 | ```docker-compose run --rm detectron2``` | create the docker based on the image and attatch to it and remove container after exit |
+| ```docker run -it -v localpath:containerpath #Image:tag |  create a docker from an image and connect to it with volume definition |
 
 
 
