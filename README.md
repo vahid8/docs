@@ -8,6 +8,9 @@
 - [Shortcuts](#Shortcuts)
 - [Git](#Git)
 - [Docker](#Docker)
+- [Alembic](#alembic)
+- [Conda](#conda)
+- [MongoDB](#mongodb)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -236,6 +239,36 @@ docker compose up
 ```
 3- change the name of localhost to youyr specified name (postgis here) in docker-compose yaml for the database.
 
+## alembic
+To do: create table
+```
+docker-compose up -d website 
+docker ps
+docker exec -it CONTAINER_ID /bin/bash
+pip install alembic
+export APP_SETTINGS="project.config.ProductionConfig"
+python3 commands.py drop-db
+alembic upgrade head
+```
+
+## Conda
+1. Install anaconda
+2. open anaconda prompt windows
+```
+conda create -n geo_env
+conda activate geo_env
+conda config  --env --add channels conda-forge
+conda config --env --set channel_priority strict
+conda install geopandas
+```
+
+## MongoDB
+```
+from pymongo import MongoClient
+client = MongoClient("mongodb://db:27017")
+db = client.SentencesDatabase  # create or connect to an existing database (here Sentence database)
+users = db["Users"]  # create or connect to an existing collection (here sentences collection)
+```
 
 
 
