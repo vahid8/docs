@@ -4,14 +4,27 @@ server {
 
         server_name 20.71.112.158;
         client_max_body_size 10000M;
-
-        location /static {
-                alias /home/ddevroot/flask_blurring/project/static;
+        
+        # inc case of direct usage
+        #location /static {
+        #        alias /home/ddevroot/flask_blurring/project/static;
+        #}
+        # in case of using docker compose and external HDD link
+        # For static folder use commands in help (sudo usermod -a -G your_user www-data) (sudo chown -R :www-data /path/to/your/static/folder)
+        location /uploads {
+                alias /home/vahid/HDD;
         }
 
         location / {
                 proxy_pass http://localhost:8000;
                 include /etc/nginx/proxy_params;
                 proxy_redirect off;
+                proxy_buffering off; # Solve the problem of updaing Eventsource.onmessage that doesnt update
+                #by default in nginx
+                # other settings that may be helpfull in some cases
+                #chunked_transfer_encoding off;
+                #proxy_cache off;
+                #proxy_http_version 1.1;
+                #proxy_set_header Connection ’’;
         }
 }
