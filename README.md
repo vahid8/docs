@@ -86,13 +86,25 @@ $ ssh root@your_server_ip
 ```shell
   $ adduser my_new_user
 ```
+-> check it
+```
+getent passwd {1000..60000} | cut -d: -f1
+```
+
 3.Granting Administrative Privileges (adding to sudo list)
 ```shell
   $ usermod -aG sudo my_new_user
 ```
-4.Enabling External Access using ssh
-  you need to add a copy of your local public key to the new users ~/.ssh/authorized_keys file
-  or simply use rysinc to copy it from root user ( you already have the key there) to the new user
+-> check it 
+```shell
+getent group sudo | cut -d: -f4
+```
+4. Copy your local machine public key to the server using terminal on your local machine (if you need to access your server with ssh directly instead of password)
+```
+ssh-copy-id my_new_user@ip.address
+```
+
+5. if you allready used the root in server, you need to copy everything from authorized keys of the root to your new user  
 ```shell
   $ rsync --archive --chown=my_new_user:my_new_user ~/.ssh /home/my_new_user
 ```
