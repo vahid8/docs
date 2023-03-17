@@ -4,6 +4,7 @@
 - [Gmail settings for app](#Gmail-app-setting)
 - [Supervisor setup](#Supervisor-setup)
 - [Ubuntu Add User](#Ubuntu-Add-User)
+- [Nginx](#nginx)
 - [Secure Nginx Encrypt](#Secure-nginx-encrypt)
 - [Shortcuts](#Shortcuts)
 - [Git](#Git)
