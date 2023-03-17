@@ -115,6 +115,13 @@ ssh-copy-id my_new_user@ip.address
 ```ssh
 $ ssh my_new_user@your_server_ip
 ```
+## Nginx
+solve problem with static access in case you create a new user <your_user> rather than root
+(check the nginx file here for more info)
+```
+sudo usermod -a -G your_user www-data
+sudo chown -R :www-data /path/to/your/static/folder
+```
 
 ## Secure Nginx Encrypt
 **Prerequisites**
