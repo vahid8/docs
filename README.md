@@ -260,7 +260,7 @@ alembic upgrade head
 ```
 
 ## Conda
-1. Install anaconda
+1. Install anaconda mini
 2. open anaconda prompt windows
 ```
 conda create -n geo_env
@@ -268,6 +268,14 @@ conda activate geo_env
 conda config  --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install geopandas
+conda install -c open3d-admin open3d
+conda install -c conda-forge laspy
+conda install -c conda-forge open-cv
+conda install -c conda-forge scikit-learn
+```
+* To change dir in windows:
+```
+cd /d d:\
 ```
 
 ## MongoDB
