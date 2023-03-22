@@ -265,12 +265,11 @@ alembic upgrade head
 ```
 conda create -n geo_env
 conda activate geo_env
-conda config  --env --add channels conda-forge
-conda config --env --set channel_priority strict
-conda install geopandas
+//conda config --env --set channel_priority strict
+conda install -c conda-forge geopandas
 conda install -c open3d-admin open3d
 conda install -c conda-forge laspy
-conda install -c conda-forge open-cv
+conda install -c conda-forge opencv
 conda install -c conda-forge scikit-learn
 ```
 * To change dir in windows:
