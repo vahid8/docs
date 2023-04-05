@@ -12,6 +12,7 @@
 - [Alembic](#alembic)
 - [Conda](#conda)
 - [MongoDB](#mongodb)
+- [GoogleCloud](#googlecloud)
 
 ## Gmail App Setting
 use the following procedure to get a 16 digit code to
@@ -285,5 +286,23 @@ db = client.SentencesDatabase  # create or connect to an existing database (here
 users = db["Users"]  # create or connect to an existing collection (here sentences collection)
 ```
 
+## GoogleCloud
+#### Installation
+download it from  https://cloud.google.com/sdk/docs/install
+Initialize it
 
+#### Log in
+gcloud auth login
+
+#### Storage (gsutil)
+```
+from pymongo import MongoClient
+client = MongoClient("mongodb://db:27017")
+db = client.SentencesDatabase  # create or connect to an existing database (here Sentence database)
+users = db["Users"]  # create or connect to an existing collection (here sentences collection)
+```
+
+#### cloud (cloud cli)
+
+#### Popstgres ()
 
