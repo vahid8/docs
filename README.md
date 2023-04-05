@@ -295,14 +295,19 @@ Initialize it
 gcloud auth login
 
 #### Storage (gsutil)
-```
-from pymongo import MongoClient
-client = MongoClient("mongodb://db:27017")
-db = client.SentencesDatabase  # create or connect to an existing database (here Sentence database)
-users = db["Users"]  # create or connect to an existing collection (here sentences collection)
-```
+| Command | Description |
+| --- | --- |
+| ```gsutils ls``` | name of avilable buckets inside that project |
+| ```gsutil ls gs://my-awesome-bucket``` | list of folders and files inside a specific bucket |
+| ```gsutil mv gs://my-awesome-bucket/images gs://my-awesome-bucket/imagesOriginal``` | move files |
+| ```gsutil -m mv gs://my-awesome-bucket/images gs://my-awesome-bucket/imagesOriginal``` | move files multithread |
+
 
 #### cloud (cloud cli)
+| Command | Description |
+| --- | --- |
+| ```gcloud config set project PROJECT_ID``` | change project |
+
 
 #### Popstgres ()
 
