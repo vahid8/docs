@@ -220,6 +220,8 @@ here is the list of commands that will be needed in daily routines
 
 ## Docker
 * In docker version 2 "docker-compose" is changed to "docker compose"
+* install docker and docker compose -> https://docs.docker.com/desktop/install/ubuntu/
+* install gpu enebaled docker -> https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
 | Command | Description |
 | --- | --- |
