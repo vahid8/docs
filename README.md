@@ -118,6 +118,16 @@ ssh-copy-id my_new_user@ip.address
 $ ssh my_new_user@your_server_ip
 ```
 ## Nginx
+Install it on your system
+#### change the config
+inside /etc/nginx folder
+```
+sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup # keep copy of default config as backup
+sudo cp my_config.conf nginx.conf
+sudo nginx -t -c /etc/nginx/nginx.conf  # test the config
+sudo systemctl reload nginx    # or sudo systemctl start nginx 
+```
+
 solve problem with static access in case you create a new user <your_user> rather than root
 (check the nginx file here for more info)
 ```
@@ -234,6 +244,7 @@ here is the list of commands that will be needed in daily routines
 | ```docker rmi``` | remove one or more images |
 | ```docker compsoe up -d``` | creating and running docker in detach mode |
 | ```docker-compose run --rm detectron2``` | create the docker based on the image and attatch to it and remove container after exit |
+| ```docker-compose run --rm yolo``` | create the docker based on the image and attatch to it and remove container after exit |
 | ```docker run -it -v localpath:containerpath #Image:tag``` |  create a docker from an image and connect to it with volume definition |
 | ```docker exec -it <name of docker> /bin/bash``` | Now you can run your command including python3 commands.py create-db |
 
