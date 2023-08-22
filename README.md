@@ -10,6 +10,7 @@
 - [Git](#Git)
 - [Docker](#Docker)
 - [Alembic](#alembic)
+- [FastAPI](#fastapi)
 - [Conda](#conda)
 - [MongoDB](#mongodb)
 - [GoogleCloud](#googlecloud)
@@ -127,7 +128,14 @@ sudo cp my_config.conf nginx.conf
 sudo nginx -t -c /etc/nginx/nginx.conf  # test the config
 sudo systemctl reload nginx    # or sudo systemctl start nginx 
 ```
+### routing
+use nginx ---> localhost:80/f_api/add?x=3&y=7
+or 
+use open original port ---> localhost:8000/add?x=2&y=4
 
+f_Api is not written on fast api's scripts but you need to adress it in your app (e.g flask or node.js) and nginx config to search for it on port 8000. 
+
+### others
 solve problem with static access in case you create a new user <your_user> rather than root
 (check the nginx file here for more info)
 ```
