@@ -121,10 +121,13 @@ $ ssh my_new_user@your_server_ip
 ## Nginx
 Install it on your system
 #### change the config
-inside /etc/nginx folder
+
 ```
-sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup # keep copy of default config as backup
-sudo cp my_config.conf nginx.conf
+sudo lsof -i:80 ## check if port 80 is used by another service ##
+sudo apt-get purge apache2  # remove apache2 if it is already installed and install nginx
+cd /etc/nginx
+sudo cp my_config.conf nginx.conf #keep copy of default config as backup if you want
+sudo vim nginx.conf  # make changes
 sudo nginx -t -c /etc/nginx/nginx.conf  # test the config
 sudo systemctl reload nginx    # or sudo systemctl start nginx 
 ```
