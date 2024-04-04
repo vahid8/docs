@@ -120,6 +120,10 @@ $ ssh my_new_user@your_server_ip
 ```
 ## Nginx
 Install it on your system
+```
+sudo apt update
+sudo apt install nginx
+```
 #### change the config
 
 ```
